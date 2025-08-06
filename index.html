@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Three.js & GSAP 练习集合</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				min-height: 100vh;
+				padding: 2rem;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				text-align: center;
+				color: white;
+				margin-bottom: 3rem;
+				font-size: 3rem;
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.exercises-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 2rem;
+			}
+
+			.exercise-card {
+				background: white;
+				border-radius: 12px;
+				padding: 2rem;
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				text-decoration: none;
+				color: inherit;
+			}
+
+			.exercise-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+			}
+
+			.exercise-title {
+				font-size: 1.25rem;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 0.5rem;
+			}
+
+			.exercise-description {
+				color: #666;
+				line-height: 1.6;
+			}
+
+			.add-exercise {
+				background: rgba(255, 255, 255, 0.1);
+				border: 2px dashed rgba(255, 255, 255, 0.3);
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				min-height: 150px;
+				font-size: 1.1rem;
+			}
+
+			.add-exercise:hover {
+				background: rgba(255, 255, 255, 0.2);
+				border-color: rgba(255, 255, 255, 0.5);
+			}
+
+			.instructions {
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 8px;
+				padding: 1.5rem;
+				margin-bottom: 2rem;
+				color: #333;
+			}
+
+			.command {
+				background: #2d3748;
+				color: #68d391;
+				padding: 0.5rem 1rem;
+				border-radius: 4px;
+				font-family: "Courier New", monospace;
+				margin: 0.5rem 0;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>🎯 Three.js练习集合</h1>
+
+			<div class="instructions">
+				<h3>📝 使用说明</h3>
+				<p>创建新练习：<span class="command">npm run create &lt;exercise-name&gt;</span></p>
+				<p>启动开发服务器：<span class="command">npm run dev</span></p>
+				<p>所有练习共享同一个 node_modules，简单高效！</p>
+			</div>
+
+			<div class="exercises-grid" id="exercisesGrid">
+				<a href="/exercises/01-basic-gsap-3js/" class="exercise-card">
+					<div class="exercise-title">01 - gsap和three.js</div>
+					<div class="exercise-description">实现简单的红色立方体移动</div>
+				</a>
+
+				<a href="/exercises/02-animations/" class="exercise-card">
+					<div class="exercise-title">02 - 动画</div>
+					<div class="exercise-description">学习 Three.js 和 GSAP 动画，创建流畅的动画效果</div>
+				</a>
+
+				<div class="exercise-card add-exercise" onclick="showCreateInstructions()">
+					<div>➕</div>
+					<div>创建新练习</div>
+					<small>点击查看创建方法</small>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// 可以在这里添加动态加载练习列表的逻辑
+			console.log("🚀 Three.js & GSAP 练习环境已就绪！");
+
+			function showCreateInstructions() {
+				alert(`创建新练习步骤：
+
+1. 打开终端 (Terminal)
+2. 运行命令: npm run create <练习名称>
+3. 例如: npm run create 03-camera-controls
+4. 刷新页面即可看到新练习
+
+提示：练习名称建议使用数字开头，如 03-lights, 04-materials 等`);
+			}
+		</script>
+	</body>
+</html>
