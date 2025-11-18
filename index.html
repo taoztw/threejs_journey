@@ -104,13 +104,6 @@
 		<div class="container">
 			<h1>🎯 Three.js练习集合</h1>
 
-			<div class="instructions">
-				<h3>📝 使用说明</h3>
-				<p>创建新练习：<span class="command">npm run create &lt;exercise-name&gt;</span></p>
-				<p>启动开发服务器：<span class="command">npm run dev</span></p>
-				<p>所有练习共享同一个 node_modules，简单高效！</p>
-			</div>
-
 			<div class="exercises-grid" id="exercisesGrid">
 				<a href="/exercises/01-basic-gsap-3js/" class="exercise-card">
 					<div class="exercise-title">01 - gsap和three.js</div>
@@ -141,28 +134,12 @@
 					<div class="exercise-title">09-debug ui</div>
 					<div class="exercise-description"></div>
 				</a>
-				<div class="exercise-card add-exercise" onclick="showCreateInstructions()">
-					<div>➕</div>
-					<div>创建新练习</div>
-					<small>点击查看创建方法</small>
-				</div>
+
+				<a href="/exercises/10-textures/" class="exercise-card">
+					<div class="exercise-title">10-textures</div>
+					<div class="exercise-description"></div>
+				</a>
 			</div>
 		</div>
-
-		<script>
-			// 可以在这里添加动态加载练习列表的逻辑
-			console.log("🚀 Three.js & GSAP 练习环境已就绪！");
-
-			function showCreateInstructions() {
-				alert(`创建新练习步骤：
-
-1. 打开终端 (Terminal)
-2. 运行命令: npm run create <练习名称>
-3. 例如: npm run create 03-camera-controls
-4. 刷新页面即可看到新练习
-
-提示：练习名称建议使用数字开头，如 03-lights, 04-materials 等`);
-			}
-		</script>
 	</body>
 </html>
